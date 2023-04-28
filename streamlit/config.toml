@@ -1,0 +1,14 @@
+python
+import toml
+
+# Define the data to be written to the file
+config_data = {
+    'server.port': 8501,
+    'server.headless': True,
+    'browser.serverAddress': 'localhost',
+    'browser.gatherUsageStats': False
+}
+
+# Write the data to the file
+with open('streamlit/config.toml', 'w') as f:
+    toml.dump(config_data, f)
